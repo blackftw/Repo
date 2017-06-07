@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/calcppgRelativeLayout1"
+	android:paddingTop="10dp">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/cost"
+		android:id="@+id/IDCOSTTV"
+		android:layout_marginTop="30dp"
+		android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/number_of_gs"
+		android:id="@+id/calcppgTextView2"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_below="@id/IDCOSTTV"
+		android:layout_alignLeft="@id/IDCOSTTV"
+		android:layout_marginTop="10dp"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/price_per_g_:"
+		android:layout_below="@id/calcppgTextView2"
+		android:id="@+id/ID_BTN_CALCPPG"
+		android:onClick="OnClickCalcPPG"
+		android:layout_marginTop="10dp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="00.00"
+		android:layout_toRightOf="@id/ID_BTN_CALCPPG"
+		android:layout_alignBottom="@id/ID_BTN_CALCPPG"
+		android:id="@+id/ID_TV_PPGANSWER"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:textColor="#142CA1"
+		android:layout_marginLeft="16dp"/>
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:inputType="numberDecimal"
+		android:layout_width="wrap_content"
+		android:ems="4"
+		android:layout_alignBottom="@id/IDCOSTTV"
+		android:id="@+id/ID_ET_COST"
+		android:layout_marginRight="10dp"
+		android:lines="1"
+		android:maxLines="1"
+		android:singleLine="true"
+		android:shadowColor="#C71C11"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_alignLeft="@id/ID_TV_PPGANSWER"/>
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:inputType="numberDecimal"
+		android:layout_width="wrap_content"
+		android:ems="4"
+		android:id="@+id/ID_ET_NUMG"
+		android:layout_alignBottom="@id/calcppgTextView2"
+		android:lines="1"
+		android:maxLines="1"
+		android:singleLine="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_alignLeft="@id/ID_TV_PPGANSWER"/>
+
+</RelativeLayout>
+

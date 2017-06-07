@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"
+		android:text="@string/price_:_"
+		android:id="@+id/calcweightTextView1"
+		android:paddingTop="20dp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"
+		android:text="@string/price_per_g_$"
+		android:layout_below="@id/calcweightTextView1"
+		android:layout_marginTop="10dp"
+		android:id="@+id/calcweightTextView2"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/number_of_gs"
+		android:layout_below="@id/calcweightTextView2"
+		android:layout_marginTop="10dp"
+		android:id="@+id/calcweightButton1"
+		android:onClick="OnClickCalcWeight"/>
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:inputType="numberDecimal"
+		android:layout_width="wrap_content"
+		android:ems="3"
+		android:layout_toRightOf="@id/calcweightTextView2"
+		android:layout_alignBottom="@id/calcweightTextView2"
+		android:id="@+id/ID_ET_CWPPG"
+		android:layout_marginLeft="30dp"/>
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:inputType="numberDecimal"
+		android:layout_width="wrap_content"
+		android:ems="3"
+		android:layout_alignLeft="@id/ID_ET_CWPPG"
+		android:id="@+id/ID_ET_CWPRICE"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"
+		android:text="0"
+		android:layout_alignLeft="@id/ID_ET_CWPPG"
+		android:layout_alignBottom="@id/calcweightButton1"
+		android:id="@+id/ID_TV_CWNUMG"
+		android:textColor="#1C2BE0"/>
+
+</RelativeLayout>
+

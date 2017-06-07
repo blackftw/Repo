@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:paddingTop="10dp">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"
+		android:text="@string/number_of_gs"
+		android:id="@+id/calccostTextView1"
+		android:layout_marginBottom="20dp"
+		android:layout_marginTop="20dp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"
+		android:text="@string/price_per_g_$"
+		android:layout_below="@id/calccostTextView1"
+		android:id="@+id/calccostTextView2"
+		android:layout_marginBottom="20dp"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/price"
+		android:layout_below="@id/calccostTextView2"
+		android:id="@+id/ID_BTN_CALCPRICE"
+		android:onClick="OnClickCalcCost"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/ID_BTN_CALCPRICE"
+		android:layout_alignBottom="@id/ID_BTN_CALCPRICE"
+		android:id="@+id/ID_TV_TOTALPRICE"
+		android:textColor="#4B1CEF"
+		android:text="00.00"
+		android:layout_marginLeft="38dp"/>
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:inputType="numberDecimal"
+		android:layout_width="wrap_content"
+		android:ems="3"
+		android:layout_alignBottom="@id/calccostTextView1"
+		android:id="@+id/ID_ET_CCNUMG"
+		android:layout_alignLeft="@id/ID_TV_TOTALPRICE"/>
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:inputType="numberDecimal"
+		android:layout_width="wrap_content"
+		android:ems="3"
+		android:layout_alignBottom="@id/calccostTextView2"
+		android:id="@+id/ID_ET_CCPPG"
+		android:layout_alignLeft="@id/ID_TV_TOTALPRICE"/>
+
+</RelativeLayout>
+
